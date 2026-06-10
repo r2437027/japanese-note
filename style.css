@@ -1,0 +1,126 @@
+:root {
+    --primary: #A8D5BA;
+    --primary-dark: #7BC47F;
+    --background: #F5FFF5;
+    --text: #2F4F4F;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family:
+        "Yu Gothic",
+        "Meiryo",
+        sans-serif;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+.container {
+    width: 95%;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 32px;
+}
+
+.card {
+    display: block;
+
+    text-decoration: none;
+    color: var(--text);
+
+    background: var(--primary);
+
+    padding: 30px;
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+.card:hover {
+    background: var(--primary-dark);
+}
+
+.btn {
+    display: inline-block;
+
+    border: none;
+
+    background: var(--primary-dark);
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.list-item {
+
+    background: white;
+
+    margin-bottom: 10px;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 5px rgba(0,0,0,.08);
+}
+
+.list-item a {
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    font-size: 22px;
+}
+
+input,
+textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ccc;
+}
+
+label {
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-weight: bold;
+}

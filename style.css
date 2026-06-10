@@ -1,78 +1,68 @@
 :root{
 
-    --green1:#6FBE73;
-    --green2:#4DA85A;
-    --green3:#2F6E3A;
+    --green:#69BE6E;
+    --green-dark:#4D9B53;
 
-    --bg:#F4FBF4;
+    --bg:#F7FCF7;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-
-    margin:0;
 
     min-height:100vh;
 
     background:
         linear-gradient(
             180deg,
-            #F8FFF8 0%,
-            #EEF8EE 100%
+            #FAFFFA,
+            #F1F9F1
         );
 
     font-family:
-        "HGP行書体",
-        "Yu Mincho",
-        "Yu Gothic",
+        "Shippori Mincho",
         serif;
-
-    color:#2F6E3A;
 }
 
-.home-container{
+.home{
 
-    max-width:800px;
+    max-width:900px;
 
     margin:auto;
 
-    padding:30px 20px;
+    padding:40px 20px;
 }
 
-.hero{
+.logo{
 
     text-align:center;
 
-    margin-bottom:40px;
+    font-size:72px;
+
+    color:#1E5A29;
+
+    font-weight:700;
+
+    margin-top:20px;
 }
 
-.app-title{
+.sub-title{
 
-    font-size:60px;
-
-    margin:0;
-
-    color:#1F5A2A;
-
-    font-weight:normal;
-
-    letter-spacing:4px;
-
-    text-shadow:
-        0 2px 10px rgba(0,0,0,.08);
-}
-
-.subtitle{
+    text-align:center;
 
     margin-top:15px;
+    margin-bottom:50px;
 
-    font-size:22px;
+    color:#3F7946;
 
-    color:#3D7A48;
+    font-size:28px;
 }
 
 .menu-card{
-
-    position:relative;
 
     display:flex;
 
@@ -82,81 +72,117 @@ body{
 
     text-decoration:none;
 
-    margin-bottom:25px;
-
-    padding:30px;
-
-    border-radius:30px;
-
     color:white;
 
     background:
         linear-gradient(
             135deg,
-            var(--green1),
-            var(--green2)
+            #8BD38E,
+            #63B86B
         );
 
-    box-shadow:
-        0 10px 30px rgba(77,168,90,.25);
+    border-radius:35px;
 
-    transition:.25s;
+    padding:30px;
+
+    margin-bottom:30px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,.12);
+
+    transition:.2s;
 }
 
 .menu-card:hover{
 
     transform:
-        translateY(-4px);
-
-    box-shadow:
-        0 15px 35px rgba(77,168,90,.35);
+        translateY(-3px);
 }
 
-.menu-icon{
+.icon-circle{
 
-    width:90px;
-    height:90px;
+    width:100px;
+    height:100px;
 
     border-radius:50%;
 
     background:
-        rgba(255,255,255,.15);
+        rgba(255,255,255,.2);
 
     display:flex;
 
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
-    font-size:45px;
-
-    backdrop-filter:blur(5px);
+    font-size:50px;
 }
 
-.menu-title{
+.card-text{
 
-    font-size:54px;
+    flex:1;
+}
 
-    line-height:1;
+.card-title{
 
-    margin-bottom:10px;
+    font-size:58px;
 
     color:white;
+
+    margin-bottom:8px;
 }
 
-.menu-desc{
+.card-sub{
 
-    font-size:24px;
+    font-size:28px;
 
-    opacity:.95;
+    color:
+        rgba(255,255,255,.95);
 }
 
-.footer-text{
+.arrow{
 
-    margin-top:40px;
+    font-size:70px;
+
+    opacity:.8;
+}
+
+.footer{
 
     text-align:center;
 
-    font-size:24px;
+    margin-top:40px;
 
-    color:#3A7A46;
+    font-size:28px;
+
+    color:#4C8D55;
+}
+
+@media(max-width:768px){
+
+    .logo{
+        font-size:52px;
+    }
+
+    .sub-title{
+        font-size:20px;
+    }
+
+    .card-title{
+        font-size:42px;
+    }
+
+    .card-sub{
+        font-size:20px;
+    }
+
+    .icon-circle{
+        width:75px;
+        height:75px;
+        font-size:35px;
+    }
+
+    .arrow{
+        font-size:45px;
+    }
 }

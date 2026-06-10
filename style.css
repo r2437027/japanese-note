@@ -95,6 +95,8 @@ body{
     font-weight:700;
 
     margin-bottom:8px;
+
+    color:var(--text);
 }
 
 .card-sub{
@@ -280,4 +282,137 @@ label {
 .detail-card p{
 
     margin-top:20px;
+}
+/* ===== HOME PAGE ===== */
+
+.home{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:40px 20px;
+}
+
+.logo{
+
+    text-align:center;
+
+    font-size:72px;
+
+    color:#2E4A36;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+}
+
+.sub-title{
+
+    text-align:center;
+
+    font-size:24px;
+
+    color:#55745D;
+
+    margin-bottom:50px;
+}
+
+.menu-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    text-decoration:none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8FD694,
+            #6DBE74
+        );
+
+    color:white;
+
+    border-radius:30px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.08);
+
+    transition:.2s;
+}
+
+.menu-card:hover{
+
+    transform:
+        translateY(-3px);
+}
+
+.icon-circle{
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.2);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:38px;
+}
+
+.card-text{
+
+    flex:1;
+}
+
+.menu-card .card-title{
+
+    color:white;
+
+    font-size:38px;
+
+    font-weight:bold;
+
+    margin-bottom:6px;
+}
+
+.menu-card .card-sub{
+
+    color:
+        rgba(255,255,255,.95);
+
+    font-size:18px;
+}
+
+.arrow{
+
+    font-size:42px;
+
+    color:white;
+
+    font-weight:bold;
+}
+
+.footer{
+
+    text-align:center;
+
+    margin-top:40px;
+
+    color:#4F7156;
+
+    font-size:24px;
 }

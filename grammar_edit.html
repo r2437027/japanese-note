@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>文法編集</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="js/db.js"></script>
+    <script src="js/grammar.js" defer></script>
+</head>
+
+<body>
+
+<div class="page-container">
+
+    <h1 class="page-title">
+        文法編集
+    </h1>
+
+    <div class="form-card">
+
+        <label>文法</label>
+        <input type="text" id="grammar">
+
+        <label>接続</label>
+        <textarea id="connection"></textarea>
+
+        <label>意味</label>
+        <textarea id="meaning"></textarea>
+
+        <label>例文</label>
+        <textarea id="example"></textarea>
+
+        <label>メモ</label>
+        <textarea id="memo"></textarea>
+
+        <button
+            class="save-btn"
+            onclick="updateGrammar()">
+
+            更新
+        </button>
+
+    </div>
+
+    <a href="grammar.html" class="back-btn">
+        ← 戻る
+    </a>
+
+</div>
+
+</body>
+</html>

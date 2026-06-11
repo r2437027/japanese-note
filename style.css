@@ -416,3 +416,25 @@ label {
 
     font-size:24px;
 }
+.delete-btn{
+
+    display:block;
+
+    width:100%;
+
+    border:none;
+
+    padding:18px;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:#D9534F;
+}

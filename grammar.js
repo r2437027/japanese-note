@@ -169,6 +169,31 @@ async function loadGrammarDetail() {
         </div>
 
         `;
+
+document.getElementById(
+    "grammarButtons"
+).innerHTML = `
+
+<a
+class="add-btn"
+href="grammar_edit.html?id=${id}">
+編集
+</a>
+
+<button
+class="delete-btn"
+onclick="deleteGrammar(${id})">
+削除
+</button>
+
+<a
+class="back-btn"
+href="grammar.html">
+戻る
+</a>
+
+`;
+        
     };
 }
 

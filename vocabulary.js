@@ -193,6 +193,8 @@ document.addEventListener(
         loadVocabularyList();
 
         loadVocabularyDetail();
+
+        loadVocabularyEdit();
     }
 );
 async function loadVocabularyEdit() {

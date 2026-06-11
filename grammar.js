@@ -179,5 +179,142 @@ document.addEventListener(
         loadGrammarList();
 
         loadGrammarDetail();
+
+        loadGrammarEdit();
     }
 );
+
+
+async function loadGrammarEdit() {
+
+    const grammar =
+        document.getElementById(
+            "grammar"
+        );
+
+    if (!grammar) return;
+
+    const params =
+        new URLSearchParams(
+            location.search
+        );
+
+    const id =
+        Number(
+            params.get("id")
+        );
+
+    const store =
+        await getGrammarStore();
+
+    const request =
+        store.get(id);
+
+    request.onsuccess = () => {
+
+        const item =
+            request.result;
+
+        if (!item) return;
+
+        grammar.value =
+            item.grammar;
+
+        document.getElementById(
+            "connection"
+        ).value =
+            item.connection;
+
+        document.getElementById(
+            "meaning"
+        ).value =
+            item.meaning;
+
+        document.getElementById(
+            "example"
+        ).value =
+            item.example;
+
+        document.getElementById(
+            "memo"
+        ).value =
+            item.memo;
+    };
+}
+
+
+async function updateGrammar() {
+
+    const params =
+        new URLSearchParams(
+            location.search
+        );
+
+    const id =
+        Number(
+            params.get("id")
+        );
+
+    const store =
+        await getGrammarStore(
+            "readwrite"
+        );
+
+    store.put({
+
+        id: id,
+
+        grammar:
+            document.getElementById(
+                "grammar"
+            ).value,
+
+        connection:
+            document.getElementById(
+                "connection"
+            ).value,
+
+        meaning:
+            document.getElementById(
+                "meaning"
+            ).value,
+
+        example:
+            document.getElementById(
+                "example"
+            ).value,
+
+        memo:
+            document.getElementById(
+                "memo"
+            ).value,
+
+        created:
+            Date.now()
+    });
+
+    alert("更新しました");
+
+    location.href =
+        "grammar_detail.html?id=" + id;
+}
+
+
+async function deleteGrammar(id) {
+
+    if (
+        !confirm("削除しますか？")
+    ) return;
+
+    const store =
+        await getGrammarStore(
+            "readwrite"
+        );
+
+    store.delete(id);
+
+    alert("削除しました");
+
+    location.href =
+        "grammar.html";
+}

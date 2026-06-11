@@ -167,3 +167,127 @@ document.addEventListener(
         loadVocabularyDetail();
     }
 );
+async function loadVocabularyEdit() {
+
+    const japanese =
+        document.getElementById("japanese");
+
+    if (!japanese) return;
+
+    const params =
+        new URLSearchParams(
+            location.search
+        );
+
+    const id =
+        Number(params.get("id"));
+
+    const store =
+        await getVocabularyStore();
+
+    const request =
+        store.get(id);
+
+    request.onsuccess = () => {
+
+        const item =
+            request.result;
+
+        if (!item) return;
+
+        japanese.value =
+            item.japanese;
+
+        document.getElementById(
+            "reading"
+        ).value =
+            item.reading;
+
+        document.getElementById(
+            "meaning"
+        ).value =
+            item.meaning;
+
+        document.getElementById(
+            "example"
+        ).value =
+            item.example;
+
+        document.getElementById(
+            "memo"
+        ).value =
+            item.memo;
+    };
+}
+async function updateVocabulary() {
+
+    const params =
+        new URLSearchParams(
+            location.search
+        );
+
+    const id =
+        Number(params.get("id"));
+
+    const store =
+        await getVocabularyStore(
+            "readwrite"
+        );
+
+    store.put({
+
+        id,
+
+        japanese:
+            document.getElementById(
+                "japanese"
+            ).value,
+
+        reading:
+            document.getElementById(
+                "reading"
+            ).value,
+
+        meaning:
+            document.getElementById(
+                "meaning"
+            ).value,
+
+        example:
+            document.getElementById(
+                "example"
+            ).value,
+
+        memo:
+            document.getElementById(
+                "memo"
+            ).value,
+
+        created:
+            Date.now()
+    });
+
+    alert("更新しました");
+
+    location.href =
+        "vocabulary_detail.html?id=" + id;
+}
+
+async function deleteVocabulary(id) {
+
+    if (
+        !confirm("削除しますか？")
+    ) return;
+
+    const store =
+        await getVocabularyStore(
+            "readwrite"
+        );
+
+    store.delete(id);
+
+    alert("削除しました");
+
+    location.href =
+        "vocabulary.html";
+}

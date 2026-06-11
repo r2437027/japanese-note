@@ -13,6 +13,7 @@ async function getVocabularyStore(mode = "readonly") {
     );
 }
 
+
 async function saveVocabulary() {
 
     const store =

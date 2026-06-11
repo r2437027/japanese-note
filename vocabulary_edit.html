@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>単語編集</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="js/db.js"></script>
+    <script src="js/vocabulary.js" defer></script>
+</head>
+
+<body>
+
+<div class="page-container">
+
+    <h1 class="page-title">
+        単語編集
+    </h1>
+
+    <div class="form-card">
+
+        <label>単語</label>
+        <input type="text" id="japanese">
+
+        <label>読み方</label>
+        <input type="text" id="reading">
+
+        <label>意味</label>
+        <input type="text" id="meaning">
+
+        <label>例文</label>
+        <textarea id="example"></textarea>
+
+        <label>メモ</label>
+        <textarea id="memo"></textarea>
+
+        <button
+            class="save-btn"
+            onclick="updateVocabulary()">
+
+            更新
+        </button>
+
+    </div>
+
+    <a href="vocabulary.html" class="back-btn">
+        ← 戻る
+    </a>
+
+</div>
+
+</body>
+</html>

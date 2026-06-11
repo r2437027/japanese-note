@@ -155,6 +155,33 @@ async function loadVocabularyDetail() {
             </div>
 
             `;
+
+document.getElementById(
+    "detailButtons"
+).innerHTML = `
+
+<a
+class="add-btn"
+href="vocabulary_edit.html?id=${id}">
+編集
+</a>
+
+<button
+class="delete-btn"
+onclick="deleteVocabulary(${id})">
+削除
+</button>
+
+<a
+class="back-btn"
+href="vocabulary.html">
+戻る
+</a>
+
+`;
+
+
+            
         };
 }
 
